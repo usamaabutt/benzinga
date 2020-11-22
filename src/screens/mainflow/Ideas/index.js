@@ -47,7 +47,7 @@ const Ideas = () => {
          size={47}
          source={{
             uri:
-               'https://picsum.photos/seed/picsum/200/200',
+               item?.user?.profile_picture.length > 0 ? item?.user?.profile_picture :  'https://picsum.photos/seed/picsum/200/200',
          }}
          containerStyle={[styles.traderAvatar, {left: -15 * index}]}
       />);
