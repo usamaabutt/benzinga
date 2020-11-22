@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
    },
    heading: {
       color: colors.lightPrimary,
-      fontWeight: '800',
+      fontWeight: 'bold',
       fontSize: size.h4,
-      marginTop: HP('3'),
+      marginTop: HP('5'),
       opacity: 0.9
    },
    subHeading: {

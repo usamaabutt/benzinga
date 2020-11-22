@@ -76,7 +76,7 @@ const Ideas = () => {
    }
 
    const _renderList = () => {
-      if (!data?.data) {
+      if (!data?.data && !moreLoader) {
          return (
             <Text style={[styles.bodyTitle, styles.noData]}>No Ideas found</Text>
          );
@@ -111,7 +111,11 @@ const Ideas = () => {
       if (data?.data?.length > 0) {
          return (
             <Text
-               style={styles.tradersCount}>{data?.data?.length > 5 ? '+ ' + data?.data?.length - 5 + 'other popular traders' : data?.data?.length + ' popular traders'}</Text>
+               style={styles.tradersCount}>
+               {data?.data?.length > 5 ? '+ ' +
+                  data?.data?.length - 5 + 'other popular traders' : data?.data?.length +
+                  ' popular traders'}
+            </Text>
          );
       }
    }
@@ -126,7 +130,7 @@ const Ideas = () => {
             {_renderTradeCount()}
          </View>
          <View style={styles.body}>
-            {data?.data?.length > 0 && <Text style={styles.bodyTitle}>LATEST IDEAS</Text>}
+            <Text style={styles.bodyTitle}>LATEST IDEAS</Text>
             {_renderList()}
          </View>
       </View>

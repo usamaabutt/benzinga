@@ -19,7 +19,7 @@ export const IdeaCard = ({item, containerStyle}) => {
                         item.user?.profile_picture ? item.user?.profile_picture : 'https://picsum.photos/seed/picsum/200/200',
                   }}
                />
-               <Text numberOfLines={1} ellipsizeMode={'trail'} style={styles.name}>{item.user?.name}</Text>
+               <Text numberOfLines={1} style={styles.name}>{item.user?.name}</Text>
             </View>
             <Text style={styles.date}>{moment(item?.created_at).format('M/D/YY, h:mmA')}</Text>
          </View>
